@@ -1,28 +1,48 @@
-//genero un numero casuale da 1 a 6 per giocatore e computer
+let giocatore = 0;
+let computer = 0 ;
 
-let giocatore = Math.floor(Math.random() * 6) + 1;
+const bottone = document.getElementById('generatore')
 
-let computer = Math.floor(Math.random() * 6) + 1;
+bottone.addEventListener('click' , function(){
 
-// vedo in console i punteggi ottenuti
+  let giocatore = Math.floor(Math.random() * 6) + 1;
 
-console.log ("Il giocatore ha ottenuto un punteggio di " +  giocatore)
+  let computer = Math.floor(Math.random() * 6) + 1;
 
-console.log ("Il computer ha ottenuto un punteggio di " +  computer)
+  let risultato = document.getElementById("risultato")
+  
+  
+  risultato.innerHTML = "Il giocatore ha lanciato il dado e ha ottenuto: " + giocatore +  "<br>" +
+
+  "Il computer ha lanciato il dado e ha ottenuto: "+ computer + "<br>"
+
+//scelta del vincitore in base al punteggio
 
 if ( giocatore > computer) {
 
   
-  console.log("Il giocatore ha vinto con un punteggio di " )
+ risultato.innerHTML += "Il giocatore vince con un punteggio di: " + giocatore;
 
 
 }else if (computer > giocatore) {
 
 
-  console.log("Il computer ha vinto")
+  risultato.innerHTML += "Il computer vince con un punteggio di: " + computer;
 
 }
 
 else {
-  console.log ("Nessun Vincitore , Pareggio")
+
+  risultato.innerHTML += "Nessun vincitore il risultato e' un pareggio!"
 }
+
+})
+
+//reset
+
+const reset = document.getElementById('resetta')
+
+reset.addEventListener('click', function(){
+
+  
+})
