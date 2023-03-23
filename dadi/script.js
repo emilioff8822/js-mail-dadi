@@ -10,4 +10,19 @@ console.log ("Il giocatore ha ottenuto un punteggio di " +  giocatore)
 
 console.log ("Il computer ha ottenuto un punteggio di " +  computer)
 
+if ( giocatore > computer) {
 
+  
+  console.log("Il giocatore ha vinto con un punteggio di " )
+
+
+}else if (computer > giocatore) {
+
+
+  console.log("Il computer ha vinto")
+
+}
+
+else {
+  console.log ("Nessun Vincitore , Pareggio")
+}
