@@ -43,6 +43,7 @@ else {
 const reset = document.getElementById('resetta')
 
 reset.addEventListener('click', function(){
+  risultato.innerHTML = " ";
 
   
 })
