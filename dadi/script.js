@@ -16,6 +16,9 @@ bottone.addEventListener('click' , function(){
 
   "Il computer ha lanciato il dado e ha ottenuto: "+ computer + "<br>"
 
+
+  info.style.display = ("none");
+
 //scelta del vincitore in base al punteggio
 
 if ( giocatore > computer) {
@@ -40,10 +43,13 @@ else {
 
 //reset
 
+let info = document.getElementById('info');
+
 const reset = document.getElementById('resetta')
 
 reset.addEventListener('click', function(){
   risultato.innerHTML = " ";
+  info.style.display = ("block");
 
   
 })
